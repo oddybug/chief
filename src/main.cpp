@@ -1,6 +1,7 @@
-#include <iostream>
+#include "Chief.h"
 
-int main (int argc, char *argv[]) {
-	std::cout << "sim hello world!\n";
-	return 0;
+int main(int argc, char *argv[]) {
+
+  Chief chief = Chief();
+  return 0;
 }
