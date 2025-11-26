@@ -28,6 +28,7 @@ set(LIBS
 )
 
 file(GLOB LIB_SRC
+    ${CMAKE_CURRENT_SOURCE_DIR}/src/*.c
     ${CMAKE_CURRENT_SOURCE_DIR}/src/*.cpp
 
     ${THIRD_PARTY_DIR}/glad/src/glad.c

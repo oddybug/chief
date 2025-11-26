@@ -1,8 +1,9 @@
 #include "Chief.h"
 
 #include "extern.cpp"
-GUI* gui;
-Renderer* renderer;
+
+GUI *gui;
+Renderer *renderer;
 
 Chief::Chief() {
   gui = new GUI();
@@ -10,7 +11,7 @@ Chief::Chief() {
   main_loop();
 }
 
-Chief::~Chief(){
+Chief::~Chief() {
   delete gui;
   delete renderer;
 }

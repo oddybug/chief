@@ -9,27 +9,32 @@
 
 class GUI {
 public:
-	GUI();
-	GUI(GUI &&) = default;
-	GUI(const GUI &) = default;
-	GUI &operator=(GUI &&) = default;
-	GUI &operator=(const GUI &) = default;
-	~GUI();
+  GUI();
+  GUI(GUI &&) = default;
+  GUI(const GUI &) = default;
+  GUI &operator=(GUI &&) = default;
+  GUI &operator=(const GUI &) = default;
+  ~GUI();
 
-	const char* window_name;
-	unsigned int window_w;
-	unsigned int window_h;
+  const char *window_name;
+  unsigned int window_w;
+  unsigned int window_h;
 
-	bool are_windows_closed();
+  /**
+   * @brief returns boolean depending on the number of windows openned
+   *
+   * @return true for all windows closed and false for negation
+   */
+  bool are_windows_closed();
 
-	void swap_buffer();
+  void swap_buffer();
 
-	SDL_GLContext gl_context;
+  SDL_GLContext gl_context;
 
 private:
-	int _init_SDL();
+  int _init_SDL();
 
-	SDL_Window* _main_window;
+  SDL_Window *_main_window;
 };
 
 #endif

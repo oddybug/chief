@@ -10,11 +10,11 @@
 #include <iostream>
 
 #include "Renderer.h"
-#include <SDL3/SDL.h>
+#include "io_provider.h"
 
 Renderer::Renderer() {
 
-  if (!gladLoadGLLoader((GLADloadproc)SDL_GL_GetProcAddress)) {
+  if (!gladLoadGLLoader((GLADloadproc)get_gl_proc_addr)) {
     throw(std::string("Failed to initialize GLAD"));
   }
 
