@@ -1,7 +1,14 @@
 #include "Chief.h"
+#include <iostream>
+#include "extern.cpp"
+
 
 int main(int argc, char *argv[]) {
 
-  Chief chief = Chief();
+  gui = new GUI();
+  renderer = new Renderer();
+
+  std::cout << "DEBUG" << std::endl;
+  Chief chief;
   return 0;
 }

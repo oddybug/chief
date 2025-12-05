@@ -33,6 +33,7 @@ void GUI::swap_buffer() { SDL_GL_SwapWindow(_main_window); }
 
 int GUI::_init_SDL() {
 
+
   SDL_Init(SDL_INIT_VIDEO);
 
   _main_window =

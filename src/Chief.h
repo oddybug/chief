@@ -1,18 +1,20 @@
 #ifndef CHIEF_H
 #define CHIEF_H
 
-
+#include "Scene.h"
+#include "Object.h"
 class Chief {
 public:
   Chief();
-  Chief(Chief &&) = default;
-  Chief(const Chief &) = default;
-  Chief &operator=(Chief &&) = default;
-  Chief &operator=(const Chief &) = default;
+
+  Chief(const Chief &);
+  Chief &operator=(Chief &&);
+  Chief &operator=(const Chief &);
   ~Chief();
 
 private:
   void main_loop();
+  Scene _scene;
 };
 
 #endif // !CHIEF_H

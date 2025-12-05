@@ -14,8 +14,11 @@
 
 Renderer::Renderer() {
 
+  std::cout << "hola\n";
   if (!gladLoadGLLoader((GLADloadproc)get_gl_proc_addr)) {
     throw(std::string("Failed to initialize GLAD"));
+  } else {
+    std::cout << "GLAD initialized successfully" << std::endl;
   }
 
   std::cout << std::setw(34) << std::left
@@ -31,8 +34,8 @@ Renderer::Renderer() {
 }
 
 void Renderer::clear_buffer() {
-  glClear(GL_COLOR_BUFFER_BIT);
-
+  glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+  glEnable(GL_DEPTH_TEST);
   glClearColor(0.1f, 0.1f, 0.13f, 1.0f);
 }
 
